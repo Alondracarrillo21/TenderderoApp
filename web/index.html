@@ -1,38 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
-
   <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="app_tendenderosmart">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>app_tendenderosmart</title>
-  <link rel="manifest" href="manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tendedero Inteligente</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+
+  <!-- Barra de navegación -->
+  <header>
+    <div class="navbar">
+      <h1>Tendedero Inteligente</h1>
+      <div class="navbar-icons">
+        <a href="statistics.html"><img src="assets/icons/stats.png" alt="Estadísticas"></a>
+        <a href="weather.html"><img src="assets/icons/weather.png" alt="Clima"></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main>
+    <div class="container">
+      <img src="assets/images/logo.png" alt="Logo" class="logo">
+      <div class="control-card">
+        <h2>Control del Tendedero Inteligente</h2>
+
+        <!-- Control del clima -->
+        <div class="weather-control">
+          <img src="assets/images/sunny.png" alt="Clima Soleado" class="weather-icon">
+          <span>Activo - Soleado</span>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <!-- Selector de hora de encendido -->
+        <div class="time-selector">
+          <label for="start-time">Hora de encendido:</label>
+          <input type="time" id="start-time">
+        </div>
+
+        <!-- Selector de hora de apagado -->
+        <div class="time-selector">
+          <label for="end-time">Hora de apagado:</label>
+          <input type="time" id="end-time">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Tendedero Inteligente</p>
+  </footer>
+
 </body>
 </html>
